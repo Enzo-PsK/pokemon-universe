@@ -1,18 +1,18 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar variant="dark" bg="dark" expand="lg">
       <Container>
         <Navbar.Brand>Pokemon Universe</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Favorites</Nav.Link>
+            <Link to="/">Home</Link>
+            <Link to="/favorites">Favorites</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

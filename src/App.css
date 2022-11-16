@@ -1,4 +1,107 @@
+.detail-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail-page .card {
+  width: 250px;
+}
+.fav-icon {
+  margin-left: 10px;
+}
+.navbar-nav a {
+  text-decoration: none !important;
+  color: white !important;
+  margin-right: 10px;
+}
+
 .pokemons-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+}
+.container {
+  position: relative;
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.favs-upper {
+  margin: 20px 0px;
+}
+.card span {
+  display: block;
+}
+.card-title {
+  text-align: center;
+}
+.pagination-btn {
+  position: absolute;
+  top: 50%;
+}
+.pagination-btn img {
+  cursor: pointer;
+  width: 100px;
+  opacity: 0.5;
+}
+.pagination-btn img:hover {
+  opacity: 1;
+}
+.pagination-btn-prev {
+  left: -5%;
+}
+.pagination-btn-prev img {
+  transform: rotate(180deg);
+}
+.pagination-btn-next {
+  right: -5%;
+}
+.dropdown-btn {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
+
+.loading-div {
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-white {
+  color: #ffffff;
+  text-decoration: none;
+}
+/* Mobile Optimization */
+@media screen and (max-width: 1300px) {
+  .pagination-btn-prev {
+    left: 0%;
+  }
+  .pagination-btn-next {
+    right: 0%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .pokemons-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .pagination-btn-prev {
+    left: 0%;
+  }
+  .pagination-btn-next {
+    right: 0%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .pokemons-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pagination-btn img {
+    width: 50px;
+  }
 }
